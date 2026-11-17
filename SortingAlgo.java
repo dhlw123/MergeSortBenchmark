@@ -1,8 +1,6 @@
-import java.util.List;
-
 public class SortingAlgo {
 
-    public void InsertionSorted(int[] arr, int l, int r) {
+    public static void InsertionSorted(int[] arr, int l, int r) {
         for (int i = l + 1; i < r; i++) {
             int index = i;
             while (index != l && arr[index] < arr[index - 1]) {
@@ -14,7 +12,7 @@ public class SortingAlgo {
         }
     }
 
-    public void MergeSorted(int[] arr, int l, int r, int cutoff) {
+    public static void MergeSorted(int[] arr, int l, int r, int cutoff) {
         int n = r - l;
         cutoff = Math.max(cutoff, 2);
         if (n < cutoff) {
